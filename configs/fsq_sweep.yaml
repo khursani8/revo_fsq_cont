@@ -1,0 +1,16 @@
+levels_sweep:
+  fixed_latent_dim: 64
+  levels: [16, 8, 4, 2]
+latent_dim_sweep:
+  fixed_levels: 16
+  latent_dim: [256, 128, 64, 32]
+seeds: [0, 1, 2]
+early_stop:
+  patience_epochs: 10
+  delta_mse: 0.001  # NORMALIZED MSE space (per plan-v3.md RC-v3-3 Architect note 2)
+  max_epochs: 200
+collapse_check:
+  metric: perplexity_div_theoretical_codebook_size
+  alarm_threshold: 0.20
+encoder_arch: [256, 128, latent_dim]
+decoder_arch: [latent_dim, 128, 256]

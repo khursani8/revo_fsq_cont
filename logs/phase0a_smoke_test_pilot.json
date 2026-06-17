@@ -1,0 +1,187 @@
+{
+  "model_section": "pilot",
+  "model_id": "google/gemma-2-2b-it",
+  "multimodal": false,
+  "started_at": "2026-06-17T07:33:53+0800",
+  "probe_prompt": "The quick brown fox",
+  "expected_hidden_size": 2304,
+  "expected_num_hidden_layers": 26,
+  "hook_layers": [
+    5,
+    10,
+    15,
+    20
+  ],
+  "hook_signals": [
+    "residual",
+    "mlp_out",
+    "attention_out"
+  ],
+  "requested_dtype": "bfloat16",
+  "requested_attention_impl": "sdpa",
+  "device_map": "auto",
+  "seed": 0,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "model_load_sec": 49.64919034810737,
+  "actual_hidden_size": 2304,
+  "actual_num_hidden_layers": 26,
+  "actual_attention_impl": null,
+  "actual_multimodal_detected": false,
+  "layer_module_path": "model.model.layers",
+  "layer_count_on_module": 26,
+  "forward_pass_1_sec": 0.5678202197887003,
+  "forward_pass_2_sec": 0.05599544709548354,
+  "determinism": {
+    "logits_bitwise_equal": true,
+    "logits_max_abs_diff": 0.0
+  },
+  "tap_points": [
+    {
+      "layer": 5,
+      "signal": "residual",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[5]"
+    },
+    {
+      "layer": 5,
+      "signal": "mlp_out",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[5].mlp"
+    },
+    {
+      "layer": 5,
+      "signal": "attention_out",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[5].self_attn"
+    },
+    {
+      "layer": 10,
+      "signal": "residual",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[10]"
+    },
+    {
+      "layer": 10,
+      "signal": "mlp_out",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[10].mlp"
+    },
+    {
+      "layer": 10,
+      "signal": "attention_out",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[10].self_attn"
+    },
+    {
+      "layer": 15,
+      "signal": "residual",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[15]"
+    },
+    {
+      "layer": 15,
+      "signal": "mlp_out",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[15].mlp"
+    },
+    {
+      "layer": 15,
+      "signal": "attention_out",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[15].self_attn"
+    },
+    {
+      "layer": 20,
+      "signal": "residual",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[20]"
+    },
+    {
+      "layer": 20,
+      "signal": "mlp_out",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[20].mlp"
+    },
+    {
+      "layer": 20,
+      "signal": "attention_out",
+      "captured": true,
+      "shape": [
+        1,
+        5,
+        2304
+      ],
+      "dtype": "torch.bfloat16",
+      "module_path": "model.model.layers[20].self_attn"
+    }
+  ],
+  "completed_at": "2026-06-17T07:34:50+0800"
+}

@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Virtualenv (uv-managed)
+.venv/
+.uv/
+
+# Large data outputs (placeholder dirs tracked via .gitkeep)
+activations/*
+!activations/.gitkeep
+datasets/*
+!datasets/.gitkeep
+clusters/*
+!clusters/.gitkeep
+fsq/*
+!fsq/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep
+memory_snapshots/*
+!memory_snapshots/.gitkeep
+evaluation/*
+!evaluation/.gitkeep
+
+# Binary data file extensions (any dir)
+*.pt
+*.safetensors
+*.npz
+*.joblib
+*.parquet
+*.arrow
+*.bin
+*.index
+
+# OMC ephemeral session state (plans/ and handoffs/ ARE tracked)
+.omc/state/
+.omc/project-memory.json
+.omc/notepad.md
+.omc/research/
+
+# Editor / scratch
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+tmp.py
+.env
+.env.local

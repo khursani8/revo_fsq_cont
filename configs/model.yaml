@@ -1,0 +1,27 @@
+active_model: pilot  # which model is currently in use; "pilot" or "final"
+
+pilot:
+  model_id: google/gemma-2-2b-it
+  hidden_size: 2304
+  num_hidden_layers: 26
+  num_attention_heads: 8
+  hook_layers: [5, 10, 15, 20]  # re-scaled from {8,16,24,32} for 26-layer model (evenly-spaced ~19/38/57/76%)
+  hook_signals: [residual, mlp_out, attention_out]
+  multimodal: false
+  dtype: bfloat16
+  attention_impl: sdpa
+  device_map: auto
+
+final:
+  model_id: google/gemma-4-E4B
+  hidden_size: 2560
+  num_hidden_layers: 42
+  num_attention_heads: 8
+  hook_layers: [8, 16, 24, 32]  # valid for 42 layers per plan-v3.md
+  hook_signals: [residual, mlp_out, attention_out]
+  multimodal: true  # hooks must target text_config tower (model.language_model.model.layers[i])
+  dtype: bfloat16
+  attention_impl: sdpa
+  device_map: auto
+
+candidates_file: /mnt/data/work/fsq_cont/configs/_hf_candidates.json

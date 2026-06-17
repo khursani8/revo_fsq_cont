@@ -1,0 +1,27 @@
+root: /mnt/data/work/fsq_cont
+
+activations_dir: /mnt/data/work/fsq_cont/activations
+activations_pca_shards: /mnt/data/work/fsq_cont/activations/pca_shards
+activations_raw_ring: /mnt/data/work/fsq_cont/activations/_raw_ring
+activations_pca_models: /mnt/data/work/fsq_cont/activations/pca_models
+
+datasets_dir: /mnt/data/work/fsq_cont/datasets
+datasets_unified: /mnt/data/work/fsq_cont/datasets/unified
+datasets_magpie_raw: /mnt/data/work/fsq_cont/datasets/magpie/raw
+datasets_web: /mnt/data/work/fsq_cont/datasets/web
+
+clusters_dir: /mnt/data/work/fsq_cont/clusters
+
+fsq_dir: /mnt/data/work/fsq_cont/fsq
+fsq_encoder_pattern: /mnt/data/work/fsq_cont/fsq/encoder_{layer}_{signal}.pt
+fsq_decoder_pattern: /mnt/data/work/fsq_cont/fsq/decoder_{layer}_{signal}.pt
+fsq_bank_pattern: /mnt/data/work/fsq_cont/fsq/bank_{layer}_{signal}.pt
+fsq_sweep_results: /mnt/data/work/fsq_cont/fsq/sweep_results.jsonl
+
+checkpoints_dir: /mnt/data/work/fsq_cont/checkpoints
+
+memory_snapshots_dir: /mnt/data/work/fsq_cont/memory_snapshots
+
+evaluation_dir: /mnt/data/work/fsq_cont/evaluation
+
+logs_dir: /mnt/data/work/fsq_cont/logs

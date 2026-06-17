@@ -1,0 +1,25 @@
+/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-06-17 07:13:58,903 - __main__ - INFO - Loading tokenizer for google/gemma-2-2b-it
+2026-06-17 07:14:05,159 - __main__ - INFO - Loading model google/gemma-2-2b-it (dtype=bfloat16, attn_impl=sdpa, device_map=auto, multimodal=False)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:43<00:43, 43.61s/it]Fetching 2 files: 100%|██████████| 2/2 [00:43<00:00, 21.80s/it]
+2026-06-17 07:14:51,774 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.00it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.88it/s]
+2026-06-17 07:14:54,923 - __main__ - INFO - model_id=google/gemma-2-2b-it multimodal=False num_hidden_layers=26 hidden_size=2304 attention_impl=None
+2026-06-17 07:14:54,923 - __main__ - INFO - layer_module_path=model.model.layers
+2026-06-17 07:14:54,923 - __main__ - INFO - Tap points (layer, signal, shape):
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=5 signal=residual shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[5]
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=5 signal=mlp_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[5].mlp
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=5 signal=attention_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[5].self_attn
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=10 signal=residual shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[10]
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=10 signal=mlp_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[10].mlp
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=10 signal=attention_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[10].self_attn
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=15 signal=residual shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[15]
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=15 signal=mlp_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[15].mlp
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=15 signal=attention_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[15].self_attn
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=20 signal=residual shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[20]
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=20 signal=mlp_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[20].mlp
+2026-06-17 07:14:54,923 - __main__ - INFO -   layer=20 signal=attention_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[20].self_attn
+2026-06-17 07:14:54,924 - __main__ - INFO - Wrote structured result to /mnt/data/work/fsq_cont/logs/phase0a_smoke_test_pilot.json (passed=True)
+SMOKE_EXIT=

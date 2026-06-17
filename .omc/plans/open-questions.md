@@ -1,0 +1,17 @@
+# Open Questions — fsq_cont
+
+## Plan v1 (FSQ Knowledge Memory Bank for Gemma-4-E4B) — 2026-06-17
+
+- [ ] **Exact HF model ID for `google/gemma-4-E4B`** — As of 2026-06-17 the existence of this model on HF Hub is unverified. Every downstream path (layer count, hidden size, tokenizer, attention impl) depends on the actual model. `scripts/verify_hf_model_id.py` will surface candidates (gemma-3-4B-it, gemma-2-9B-it, etc.) but the user must confirm which to canonize. Without this, hidden-size assumptions (4096) and layer indices {8, 16, 24, 32} are speculative. Blocks Phase 0.
+- [ ] **Acceptable wall-clock budget for Phases 0–4** — At 11–24GB free per H200 under contention, Phase 2 alone is projected ⚠️ WARNING: EXPECTED/PROJECTED at 100–400 GPU-hours. Determines whether the pilot is 500k prompts (de-risk first) or jump straight to 5M. Directly trades against the user's other running workloads. Blocks Phase 1 scaling decision.
+- [ ] **Is Magpie available and licensed for this use?** — Magpie-UA / Magpie-Align terms vary by release; commercial-research splits matter. If Magpie is unavailable or license-incompatible, Phase 1 must rely on FineWeb + synthetic QA only, which weakens latent coverage. Blocks Phase 1 Source A.
+- [ ] **Acceptable benchmark suites for Phase 7 baseline** — PLAN.md lists MMLU, GSM8K, HumanEval, HellaSwag, TruthfulQA. Are any deprecated/replaced as of 2026-06-17? Is `lm-eval-harness` the runner, or an internal harness? Defines what "forgetting" means operationally and gates the Phase 10 drift-correlation claim. Blocks Phase 7.
+- [ ] **Start on a smaller proxy model first (e.g., gemma-2-2B)?** — A 2B model fits comfortably in 11GB free and runs the entire Phase 0–5 pipeline in hours, not days. If "yes", Phase 0 targets the proxy and the gemma-4-E4B run becomes Phase 0b. If "no", we accept the contention risk on the 4B model from day one (Principle 2 still holds — proxy is never the final deliverable, only a pipeline validator). Blocks Phase 0 model selection.
+
+## Plan v2 iteration (post-Critic) — 2026-06-17
+
+- [ ] **OQ-7: Is the user committed to FSQ specifically, or would VQ-VAE / LFQ / BSVQ be acceptable if FSQ collapse proves intractable at this scale?** — The entire plan (encoder shape, sweep axes, theoretical-codebook-size math, perplexity-based utilization metric) is FSQ-specific. Scenario 1 mitigation (d) lists a "VQ-VIBE / affinity-normalized FSQ variant" fallback, but if the user is FSQ-only committed, that fallback is a documented dead-end and the pre-mortem needs a stronger escape path (e.g., reduce capacity to a single layer, or accept collapse as a finding rather than a failure). If LFQ (Lookup-Free Quantization) or BSVQ are acceptable same-family alternatives, the Scenario 1 escape is concrete and the pre-mortem stands. This is a user preference (quantization-family commitment), not a codebase fact. Blocks Phase 4 fallback design — determines whether Scenario 1 mitigation (d) is a real branch or a documented dead-end.
+
+## Plan v3 iteration (post-Critic iteration-2) — 2026-06-17
+
+- [ ] **OQ-8: Should PLAN.md's original single 5-point capacity ladder (256×16, 128×16, 64×16, 64×8, 32×8) be preserved verbatim, or is the v3 two-sweep design (levels sweep + latent-dim sweep) acceptable?** The v3 split isolates FSQ levels from encoder latent-dim per Principle 5 but deviates from PLAN.md §Phase 4. **Why it blocks Phase 4**: determines the sweep grid shape. Default in v3: two-sweep design. User-veto path: revert to PLAN.md ladder with a documented Principle-5 caveat.

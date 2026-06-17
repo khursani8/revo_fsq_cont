@@ -1,0 +1,35 @@
+{
+  "model_section": "final",
+  "model_id": "google/gemma-4-E4B",
+  "multimodal": true,
+  "started_at": "2026-06-17T07:36:11+0800",
+  "probe_prompt": "The quick brown fox",
+  "expected_hidden_size": 2560,
+  "expected_num_hidden_layers": 42,
+  "hook_layers": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "hook_signals": [
+    "residual",
+    "mlp_out",
+    "attention_out"
+  ],
+  "requested_dtype": "bfloat16",
+  "requested_attention_impl": "sdpa",
+  "device_map": "auto",
+  "seed": 0,
+  "passed": false,
+  "errors": [
+    "layer-module resolution failed: Could not locate decoder layers container on model of type Gemma4ForConditionalGeneration (multimodal=True)"
+  ],
+  "warnings": [],
+  "model_load_sec": 128.55053002526984,
+  "actual_hidden_size": 2560,
+  "actual_num_hidden_layers": 42,
+  "actual_attention_impl": null,
+  "actual_multimodal_detected": true,
+  "completed_at": "2026-06-17T07:38:27+0800"
+}

@@ -1,0 +1,46 @@
+2026-06-17 07:33:53,978 - __main__ - INFO - Loading tokenizer for google/gemma-2-2b-it
+2026-06-17 07:33:54,252 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+2026-06-17 07:33:54,544 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-06-17 07:33:54,829 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-17 07:33:55,081 - httpx - INFO - HTTP Request: GET https://huggingface.co/google/gemma-2-2b-it/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-17 07:33:55,346 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/google/gemma-2-2b-it/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-17 07:33:55,611 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/google/gemma-2-2b-it/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-17 07:33:55,881 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/tokenizer.json "HTTP/1.1 302 Found"
+2026-06-17 07:33:57,831 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-06-17 07:33:58,090 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-06-17 07:33:58,345 - httpx - INFO - HTTP Request: GET https://huggingface.co/google/gemma-2-2b-it/resolve/main/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-06-17 07:33:58,616 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-06-17 07:33:59,889 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/google/gemma-2-2b-it "HTTP/1.1 200 OK"
+2026-06-17 07:33:59,897 - __main__ - INFO - Loading model google/gemma-2-2b-it (dtype=bfloat16, attn_impl=sdpa, device_map=auto, multimodal=False)
+2026-06-17 07:34:00,150 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-06-17 07:34:00,410 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+2026-06-17 07:34:00,895 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-06-17 07:34:01,150 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-06-17 07:34:01,412 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/model.safetensors.index.json "HTTP/1.1 200 OK"
+2026-06-17 07:34:01,671 - httpx - INFO - HTTP Request: GET https://huggingface.co/google/gemma-2-2b-it/resolve/main/model.safetensors.index.json "HTTP/1.1 200 OK"
+2026-06-17 07:34:01,936 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/google/gemma-2-2b-it/revision/main "HTTP/1.1 200 OK"
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]2026-06-17 07:34:02,216 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/299a8560bedf22ed1c72a8a11e7dce4a7f9f51f8/model-00002-of-00002.safetensors "HTTP/1.1 302 Found"
+2026-06-17 07:34:02,220 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/299a8560bedf22ed1c72a8a11e7dce4a7f9f51f8/model-00001-of-00002.safetensors "HTTP/1.1 302 Found"
+Fetching 2 files:  50%|█████     | 1/2 [00:43<00:43, 43.98s/it]Fetching 2 files: 100%|██████████| 2/2 [00:43<00:00, 21.99s/it]
+Loading weights:   0%|          | 0/288 [00:00<?, ?it/s]Loading weights:   0%|          | 1/288 [00:00<01:19,  3.59it/s]Loading weights:   9%|▊         | 25/288 [00:00<00:03, 80.23it/s]Loading weights:  18%|█▊        | 53/288 [00:00<00:01, 142.68it/s]Loading weights:  30%|██▉       | 85/288 [00:00<00:01, 185.03it/s]Loading weights:  43%|████▎     | 124/288 [00:00<00:00, 236.91it/s]Loading weights:  52%|█████▏    | 151/288 [00:00<00:00, 221.86it/s]Loading weights:  62%|██████▎   | 180/288 [00:00<00:00, 234.24it/s]Loading weights:  72%|███████▏  | 206/288 [00:01<00:00, 238.48it/s]Loading weights:  81%|████████▏ | 234/288 [00:01<00:00, 246.96it/s]Loading weights:  90%|█████████ | 260/288 [00:01<00:00, 236.18it/s]Loading weights:  99%|█████████▉| 286/288 [00:01<00:00, 242.09it/s]Loading weights: 100%|██████████| 288/288 [00:01<00:00, 204.55it/s]
+2026-06-17 07:34:49,010 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/generation_config.json "HTTP/1.1 200 OK"
+2026-06-17 07:34:49,264 - httpx - INFO - HTTP Request: GET https://huggingface.co/google/gemma-2-2b-it/resolve/main/generation_config.json "HTTP/1.1 200 OK"
+2026-06-17 07:34:49,543 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"
+2026-06-17 07:34:50,220 - __main__ - INFO - model_id=google/gemma-2-2b-it multimodal=False num_hidden_layers=26 hidden_size=2304 attention_impl=None
+2026-06-17 07:34:50,220 - __main__ - INFO - layer_module_path=model.model.layers
+2026-06-17 07:34:50,220 - __main__ - INFO - Tap points (layer, signal, shape):
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=5 signal=residual shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[5]
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=5 signal=mlp_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[5].mlp
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=5 signal=attention_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[5].self_attn
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=10 signal=residual shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[10]
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=10 signal=mlp_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[10].mlp
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=10 signal=attention_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[10].self_attn
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=15 signal=residual shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[15]
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=15 signal=mlp_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[15].mlp
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=15 signal=attention_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[15].self_attn
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=20 signal=residual shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[20]
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=20 signal=mlp_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[20].mlp
+2026-06-17 07:34:50,220 - __main__ - INFO -   layer=20 signal=attention_out shape=(1, 5, 2304) dtype=torch.bfloat16 path=model.model.layers[20].self_attn
+2026-06-17 07:34:50,221 - __main__ - INFO - Wrote structured result to /mnt/data/work/fsq_cont/logs/phase0a_smoke_test_pilot.json (passed=True)
+SMOKE_EXIT=

@@ -1,0 +1,83 @@
+2026-06-17 07:49:31,529 - __main__ - INFO - Loading tokenizer for google/gemma-4-E4B
+2026-06-17 07:49:31,837 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-4-E4B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-17 07:49:31,847 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/google/gemma-4-E4B/a24c9379fd3839ae84e97f0b6aa3152fce9bd033/config.json "HTTP/1.1 200 OK"
+2026-06-17 07:49:32,136 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-4-E4B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-17 07:49:32,145 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/google/gemma-4-E4B/a24c9379fd3839ae84e97f0b6aa3152fce9bd033/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-17 07:49:32,404 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/google/gemma-4-E4B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-17 07:49:32,669 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/google/gemma-4-E4B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-17 07:49:35,475 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/google/gemma-4-E4B "HTTP/1.1 200 OK"
+2026-06-17 07:49:35,538 - __main__ - INFO - Loading model google/gemma-4-E4B (dtype=bfloat16, attn_impl=sdpa, device_map=auto, multimodal=True)
+2026-06-17 07:49:35,793 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-4-E4B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-17 07:49:35,802 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/google/gemma-4-E4B/a24c9379fd3839ae84e97f0b6aa3152fce9bd033/config.json "HTTP/1.1 200 OK"
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+2026-06-17 07:49:36,127 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-4-E4B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-17 07:49:36,137 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/google/gemma-4-E4B/a24c9379fd3839ae84e97f0b6aa3152fce9bd033/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  36%|███▋      | 754/2076 [00:00<00:00, 1877.23it/s]Loading weights:  45%|████▌     | 942/2076 [00:01<00:01, 707.52it/s] Loading weights:  50%|████▉     | 1035/2076 [00:01<00:01, 572.75it/s]Loading weights:  53%|█████▎    | 1099/2076 [00:01<00:01, 513.96it/s]Loading weights:  55%|█████▌    | 1150/2076 [00:01<00:01, 483.27it/s]Loading weights:  70%|██████▉   | 1453/2076 [00:01<00:00, 868.58it/s]Loading weights:  77%|███████▋  | 1608/2076 [00:02<00:00, 989.71it/s]Loading weights:  95%|█████████▍| 1966/2076 [00:02<00:00, 1514.10it/s]Loading weights: 100%|██████████| 2076/2076 [00:02<00:00, 949.70it/s] 
+2026-06-17 07:49:39,969 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-4-E4B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-17 07:49:39,978 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/google/gemma-4-E4B/a24c9379fd3839ae84e97f0b6aa3152fce9bd033/generation_config.json "HTTP/1.1 200 OK"
+2026-06-17 07:49:40,224 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/google/gemma-4-E4B/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"
+2026-06-17 07:49:40,601 - accelerate.big_modeling - WARNING - Some parameters are on the meta device because they were offloaded to the cpu.
+Traceback (most recent call last):
+  File "/mnt/data/work/fsq_cont/scripts/smoke_test_model.py", line 341, in <module>
+    main()
+  File "/mnt/data/work/fsq_cont/scripts/smoke_test_model.py", line 266, in main
+    logits2 = run_once(model, inputs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/scripts/smoke_test_model.py", line 131, in run_once
+    out = model(**inputs)
+          ^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/accelerate/hooks.py", line 192, in new_forward
+    output = module._old_forward(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 907, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/transformers/models/gemma4/modeling_gemma4.py", line 2508, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 1036, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 907, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/transformers/models/gemma4/modeling_gemma4.py", line 2271, in forward
+    per_layer_inputs = self.language_model.get_per_layer_inputs(llm_input_ids, llm_inputs_embeds)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/transformers/models/gemma4/modeling_gemma4.py", line 1775, in get_per_layer_inputs
+    return self.embed_tokens_per_layer(input_ids).reshape(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/accelerate/hooks.py", line 187, in new_forward
+    args, kwargs = module._hf_hook.pre_forward(module, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/accelerate/hooks.py", line 50, in wrapper
+    return wrapper._compiled_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1298, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/accelerate/hooks.py", line 388, in pre_forward
+    set_module_tensor_to_device(
+  File "/mnt/data/work/fsq_cont/.venv/lib/python3.12/site-packages/accelerate/utils/modeling.py", line 353, in set_module_tensor_to_device
+    new_value = value.to(device, non_blocking=non_blocking)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.25 GiB. GPU 0 has a total capacity of 139.80 GiB of which 1.17 GiB is free. Process 398440 has 126.71 GiB memory in use. Including non-PyTorch memory, this process has 11.91 GiB memory in use. Of the allocated memory 6.02 GiB is allocated by PyTorch, and 5.22 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+SMOKE_EXIT=
